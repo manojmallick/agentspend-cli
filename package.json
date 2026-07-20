@@ -1,22 +1,29 @@
 {
-  "name": "agentops",
+  "name": "agentspend-cli",
   "version": "0.1.0",
-  "private": true,
-  "description": "agentops",
+  "description": "Track and cap AI agent API spend, and sync agent config/state across environments",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manojmallick/agentops.git"
+  },
   "bin": {
-    "agentops": "./dist/cli.js"
+    "agentops": "dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist/cli.js",
+    "dist/cli.d.ts",
+    "dist/logic"
   ],
   "scripts": {
     "dev": "tsx watch src/cli.ts",
     "build": "tsc -p tsconfig.json",
+    "postbuild": "chmod +x dist/cli.js",
     "start": "node dist/cli.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "pnpm build && node --test \"dist/test/*.test.js\"",
     "changeset": "changeset",
-    "postinstall": "sigmap",
     "map:refresh": "sigmap",
     "map:report": "sigmap --report --json",
     "map:watch": "sigmap daemon start",
