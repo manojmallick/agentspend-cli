@@ -1,0 +1,35 @@
+{
+  "name": "agentops",
+  "version": "0.1.0",
+  "private": true,
+  "description": "agentops",
+  "type": "module",
+  "bin": {
+    "agentops": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/cli.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "changeset": "changeset",
+    "postinstall": "sigmap",
+    "map:refresh": "sigmap",
+    "map:report": "sigmap --report --json",
+    "map:watch": "sigmap daemon start",
+    "map:setup": "sigmap --setup"
+  },
+  "dependencies": {
+    "commander": "^15.0.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.1",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.23.1",
+    "typescript": "^5.9.0",
+    "sigmap": "^8.18.0"
+  }
+}
