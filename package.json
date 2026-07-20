@@ -4,10 +4,18 @@
   "description": "Track and cap AI agent API spend, and sync agent config/state across environments",
   "type": "module",
   "license": "MIT",
+  "author": "Manoj Mallick",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manojmallick/agentops.git"
   },
+  "keywords": [
+    "cli",
+    "ai-agents",
+    "cost-tracking",
+    "budget",
+    "sync"
+  ],
   "bin": {
     "agentops": "dist/cli.js"
   },
