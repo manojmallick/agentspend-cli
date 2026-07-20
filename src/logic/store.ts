@@ -2,11 +2,10 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const CONFIG_DIR = join(homedir(), ".agentops");
-
 export function configDir(): string {
-  if (!existsSync(CONFIG_DIR)) mkdirSync(CONFIG_DIR, { recursive: true });
-  return CONFIG_DIR;
+  const dir = process.env.AGENTOPS_HOME ?? join(homedir(), ".agentops");
+  if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
+  return dir;
 }
 
 export function readJson<T>(filename: string, fallback: T): T {
