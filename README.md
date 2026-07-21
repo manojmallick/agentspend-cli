@@ -9,6 +9,13 @@
 Local-first, free CLI. No server, no account — everything lives in `~/.agentops`
 (or `$AGENTOPS_HOME` if set).
 
+![agentops stats](docs/stats-banner.svg)
+
+Real numbers, not a benchmark — agentops doesn't have a retrieval/accuracy metric
+to report, so this is test count, package size, and dependency count, regenerated
+from an actual build/test run by `scripts/refresh-stats.mjs`. See
+[docs-vp/guide/stats.md](docs-vp/guide/stats.md) for details.
+
 ## Try it now
 
 ```bash
@@ -74,6 +81,12 @@ git commit -am "..."  # commit the changeset file
 
 Merging to `main` triggers the `deploy-npm-publish` GitHub Actions workflow (Changesets
 opens a "Version Packages" PR; merging that publishes). Requires an `NPM_TOKEN` secret.
+
+## Docs
+
+- [Full CLI reference](docs-vp/guide/cli.md)
+- [Roadmap](docs-vp/guide/roadmap.md)
+- [Project stats](docs-vp/guide/stats.md)
 
 ## Contributing
 

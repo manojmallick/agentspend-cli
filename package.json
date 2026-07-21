@@ -32,6 +32,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "pnpm build && node --test \"dist/test/*.test.js\"",
     "changeset": "changeset",
+    "stats:refresh": "node scripts/refresh-stats.mjs && node scripts/generate-stats-banner.mjs",
+    "version:sync": "node scripts/sync-versions.mjs",
     "map:refresh": "sigmap",
     "map:report": "sigmap --report --json",
     "map:watch": "sigmap daemon start",
