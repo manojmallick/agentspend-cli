@@ -1,10 +1,10 @@
-# Contributing to agentops
+# Contributing to agentspend
 
-Thanks for contributing to agentops.
+Thanks for contributing to agentspend.
 
 ## Branch workflow
 
-agentops uses a single `main` branch. Open pull requests against:
+agentspend uses a single `main` branch. Open pull requests against:
 
 ```
 main

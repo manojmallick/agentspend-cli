@@ -8,7 +8,7 @@
   "packageManager": "pnpm@10.33.2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manojmallick/agentops.git"
+    "url": "git+https://github.com/manojmallick/agentspend-cli.git"
   },
   "keywords": [
     "cli",
@@ -18,7 +18,7 @@
     "sync"
   ],
   "bin": {
-    "agentops": "dist/cli.js"
+    "agentspend": "dist/cli.js"
   },
   "files": [
     "dist/cli.js",

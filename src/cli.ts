@@ -5,7 +5,7 @@ import { listProfiles, loadProfile, saveProfile } from "./logic/sync.js";
 
 const program = new Command();
 
-program.name("agentops").description("Track AI agent spend and sync agent config/state across environments").version("0.1.0");
+program.name("agentspend").description("Track AI agent spend and sync agent config/state across environments").version("0.1.0");
 
 const spend = program.command("spend").description("Track and cap AI agent API spend");
 
@@ -53,7 +53,7 @@ spend
     }
     const status = checkBudget(opts.project);
     if (status.budget === null) {
-      console.log("No budget set. Run `agentops spend budget <amount>` to set one.");
+      console.log("No budget set. Run `agentspend spend budget <amount>` to set one.");
       return;
     }
     console.log(`Spend: $${status.total.toFixed(4)} / Budget: $${status.budget.toFixed(2)}`);

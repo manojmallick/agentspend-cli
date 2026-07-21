@@ -2,7 +2,7 @@
 
 ## Reporting Security Vulnerabilities
 
-If you discover a security vulnerability in agentops, please do **not** open a public GitHub issue. Instead, email us at **manoj.mallick079@gmail.com** with:
+If you discover a security vulnerability in agentspend, please do **not** open a public GitHub issue. Instead, email us at **manoj.mallick079@gmail.com** with:
 
 - Description of the vulnerability
 - Steps to reproduce (if applicable)
@@ -15,10 +15,10 @@ We will acknowledge your report within 48 hours and work with you to fix the iss
 
 ### For Users
 
-- Keep agentops updated to the latest version
-- All state (`spend` entries, `sync` profiles) is stored locally in `~/.agentops` (or `$AGENTOPS_HOME` if set) — nothing is sent over the network
+- Keep agentspend updated to the latest version
+- All state (`spend` entries, `sync` profiles) is stored locally in `~/.agentspend` (or `$AGENTSPEND_HOME` if set) — nothing is sent over the network
 - `sync save`/`sync load` copy files as-is; do not save profiles containing secrets you wouldn't want copied to another machine unencrypted
-- Do not commit `~/.agentops` contents to version control
+- Do not commit `~/.agentspend` contents to version control
 
 ### For Contributors
 
@@ -43,7 +43,7 @@ We will acknowledge your report within 48 hours and work with you to fix the iss
 
 ## Minimal Dependencies
 
-agentops has a single runtime dependency ([commander](https://www.npmjs.com/package/commander), for CLI argument parsing):
+agentspend has a single runtime dependency ([commander](https://www.npmjs.com/package/commander), for CLI argument parsing):
 - No network calls — all data stays on the local filesystem
 - Small, well-audited dependency surface
 - No install scripts — nothing runs automatically on `npm install`

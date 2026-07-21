@@ -8,13 +8,13 @@ import { checkBudget, getReport, setBudget, trackSpend } from "../logic/spend.js
 let tempHome: string;
 
 beforeEach(() => {
-  tempHome = mkdtempSync(join(tmpdir(), "agentops-spend-test-"));
-  process.env.AGENTOPS_HOME = tempHome;
+  tempHome = mkdtempSync(join(tmpdir(), "agentspend-spend-test-"));
+  process.env.AGENTSPEND_HOME = tempHome;
 });
 
 afterEach(() => {
   rmSync(tempHome, { recursive: true, force: true });
-  delete process.env.AGENTOPS_HOME;
+  delete process.env.AGENTSPEND_HOME;
 });
 
 test("trackSpend records an entry with a timestamp", () => {

@@ -2,9 +2,9 @@
 /**
  * refresh-stats.mjs
  *
- * Recomputes agentops's real project stats (test results, package size,
+ * Recomputes agentspend's real project stats (test results, package size,
  * dependency count, command count) and writes them into version.json.
- * These are the only "metrics" agentops has — no retrieval/token-reduction
+ * These are the only "metrics" agentspend has — no retrieval/token-reduction
  * benchmarks apply here, so this script never fabricates a comparison
  * number; every field is read directly from a real run.
  *

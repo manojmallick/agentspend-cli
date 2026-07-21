@@ -9,15 +9,15 @@ let tempHome: string;
 let sourceFile: string;
 
 beforeEach(() => {
-  tempHome = mkdtempSync(join(tmpdir(), "agentops-sync-test-"));
-  process.env.AGENTOPS_HOME = tempHome;
+  tempHome = mkdtempSync(join(tmpdir(), "agentspend-sync-test-"));
+  process.env.AGENTSPEND_HOME = tempHome;
   sourceFile = join(tempHome, "source.json");
   writeFileSync(sourceFile, JSON.stringify({ model: "gpt-4o" }));
 });
 
 afterEach(() => {
   rmSync(tempHome, { recursive: true, force: true });
-  delete process.env.AGENTOPS_HOME;
+  delete process.env.AGENTSPEND_HOME;
 });
 
 test("saveProfile copies the source file into the profile store", () => {

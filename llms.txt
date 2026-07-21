@@ -1,17 +1,17 @@
-# agentops
+# agentspend
 
 > Track and cap AI agent API spend, and sync agent config/state across environments.
-> A free local-first CLI — no server, no account, all data stays in `~/.agentops`.
+> A free local-first CLI — no server, no account, all data stays in `~/.agentspend`.
 
-agentops is a CLI with two tools for people running AI agents: `spend` records
+agentspend is a CLI with two tools for people running AI agents: `spend` records
 API cost per provider/project, reports totals, and can fail a CI job when a
 budget is exceeded; `sync` saves and restores named snapshots of agent
 config/state files so you can move them between machines or environments.
 
 # Source: package.json, src/cli.ts
-# npm package: agentspend-cli (bin command: agentops)
+# npm package: agentspend-cli (bin command: agentspend)
 
-## What agentops solves
+## What agentspend solves
 
 - No visibility into what an agent's API calls actually cost — `spend track` + `spend report` gives a running total by provider and project.
 - Budgets get blown silently — `spend budget <amount>` sets a cap; `spend budget` (no argument) exits non-zero when over, so it can gate CI.
@@ -20,20 +20,20 @@ config/state files so you can move them between machines or environments.
 ## Quick start
 ```bash
 npm install -g agentspend-cli
-agentops spend track --provider openai --cost 0.42 --project myagent
-agentops spend report
-agentops spend budget 10.00
-agentops sync save myagent ./agent-config.json
-agentops sync load myagent ./restored-config.json
+agentspend spend track --provider openai --cost 0.42 --project myagent
+agentspend spend report
+agentspend spend budget 10.00
+agentspend sync save myagent ./agent-config.json
+agentspend sync load myagent ./restored-config.json
 ```
 
 ## Docs
-- [README](https://github.com/manojmallick/agentops/blob/main/README.md)
-- [Changelog](https://github.com/manojmallick/agentops/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/manojmallick/agentops/blob/main/CONTRIBUTING.md)
+- [README](https://github.com/manojmallick/agentspend-cli/blob/main/README.md)
+- [Changelog](https://github.com/manojmallick/agentspend-cli/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/manojmallick/agentspend-cli/blob/main/CONTRIBUTING.md)
 
 ## Optional
-- [GitHub repository](https://github.com/manojmallick/agentops)
+- [GitHub repository](https://github.com/manojmallick/agentspend-cli)
 - [npm package](https://www.npmjs.com/package/agentspend-cli)
 
-agentops — local-first spend tracking and config sync for people running AI agents.
+agentspend — local-first spend tracking and config sync for people running AI agents.

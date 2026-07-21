@@ -1,24 +1,24 @@
 # CLI reference
 
-All 8 agentops commands (2 command groups, 3 subcommands each, plus the top-level `--version`/`--help` flags).
+All 8 agentspend commands (2 command groups, 3 subcommands each, plus the top-level `--version`/`--help` flags).
 
 ## Quick reference
 
 | Command | Description |
 |---|---|
-| `agentops spend track` | Record a spend entry |
-| `agentops spend report` | Show spend totals |
-| `agentops spend budget` | Set or check the spend budget |
-| `agentops sync save` | Save a local file as a named profile |
-| `agentops sync load` | Write a saved profile to a destination path |
-| `agentops sync list` | List saved profiles |
+| `agentspend spend track` | Record a spend entry |
+| `agentspend spend report` | Show spend totals |
+| `agentspend spend budget` | Set or check the spend budget |
+| `agentspend sync save` | Save a local file as a named profile |
+| `agentspend sync load` | Write a saved profile to a destination path |
+| `agentspend sync list` | List saved profiles |
 
 ## spend track
 
-Records one spend entry (provider, optional model, cost, optional project label) to `~/.agentops/spend.json`.
+Records one spend entry (provider, optional model, cost, optional project label) to `~/.agentspend/spend.json`.
 
 ```bash
-agentops spend track --provider openai --model gpt-4o --cost 0.42 --project myagent
+agentspend spend track --provider openai --model gpt-4o --cost 0.42 --project myagent
 # Recorded $0.4200 for openai (myagent)
 ```
 
@@ -34,14 +34,14 @@ agentops spend track --provider openai --model gpt-4o --cost 0.42 --project myag
 Totals recorded spend, optionally scoped to a project, optionally as JSON.
 
 ```bash
-agentops spend report
+agentspend spend report
 # Total spend: $0.5200
 # Budget: $10.00
 # By provider:
 #   openai: $0.4200
 #   anthropic: $0.1000
 
-agentops spend report --project myagent --json
+agentspend spend report --project myagent --json
 ```
 
 | Option | Description |
@@ -54,10 +54,10 @@ agentops spend report --project myagent --json
 Sets a budget (with an argument) or checks status against it (with none). Checking exits `1` when over budget, so it can gate a CI job.
 
 ```bash
-agentops spend budget 10.00
+agentspend spend budget 10.00
 # Budget set to $10.00
 
-agentops spend budget
+agentspend spend budget
 # Spend: $10.52 / Budget: $10.00
 # Over budget!
 ```
@@ -69,11 +69,11 @@ agentops spend budget
 
 ## sync save
 
-Copies a local file into `~/.agentops/profiles/<name>`.
+Copies a local file into `~/.agentspend/profiles/<name>`.
 
 ```bash
-agentops sync save myagent ./agent-config.json
-# Saved profile "myagent" -> /Users/you/.agentops/profiles/myagent
+agentspend sync save myagent ./agent-config.json
+# Saved profile "myagent" -> /Users/you/.agentspend/profiles/myagent
 ```
 
 ## sync load
@@ -81,7 +81,7 @@ agentops sync save myagent ./agent-config.json
 Copies a saved profile back out to a destination path.
 
 ```bash
-agentops sync load myagent ./restored-config.json
+agentspend sync load myagent ./restored-config.json
 # Loaded profile "myagent" -> ./restored-config.json
 ```
 
@@ -92,6 +92,6 @@ Errors cleanly (exit `1`, no stack trace) if the profile was never saved.
 Lists all saved profile names.
 
 ```bash
-agentops sync list
+agentspend sync list
 # myagent
 ```

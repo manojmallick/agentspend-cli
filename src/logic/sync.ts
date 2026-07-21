@@ -20,7 +20,7 @@ export function saveProfile(name: string, sourceFile: string): string {
 export function loadProfile(name: string, destFile: string): string {
   const source = join(profilesDir(), name);
   if (!existsSync(source)) {
-    throw new Error(`No saved profile named "${name}". Run "agentops sync save ${name} <file>" first.`);
+    throw new Error(`No saved profile named "${name}". Run "agentspend sync save ${name} <file>" first.`);
   }
   copyFileSync(source, destFile);
   return destFile;

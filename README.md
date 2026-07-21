@@ -1,17 +1,17 @@
-# agentops
+# agentspend
 
 **Track and cap AI agent API spend, and sync agent config/state across environments.**
 
 [![npm version](https://img.shields.io/npm/v/agentspend-cli?color=7c6af7&label=latest&logo=npm)](https://www.npmjs.com/package/agentspend-cli)
-[![build](https://github.com/manojmallick/agentops/actions/workflows/build.yml/badge.svg)](https://github.com/manojmallick/agentops/actions/workflows/build.yml)
+[![build](https://github.com/manojmallick/agentspend-cli/actions/workflows/build.yml/badge.svg)](https://github.com/manojmallick/agentspend-cli/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-7c6af7.svg)](LICENSE)
 
-Local-first, free CLI. No server, no account — everything lives in `~/.agentops`
-(or `$AGENTOPS_HOME` if set).
+Local-first, free CLI. No server, no account — everything lives in `~/.agentspend`
+(or `$AGENTSPEND_HOME` if set).
 
-![agentops stats](docs/stats-banner.svg)
+![agentspend stats](docs/stats-banner.svg)
 
-Real numbers, not a benchmark — agentops doesn't have a retrieval/accuracy metric
+Real numbers, not a benchmark — agentspend doesn't have a retrieval/accuracy metric
 to report, so this is test count, package size, and dependency count, regenerated
 from an actual build/test run by `scripts/refresh-stats.mjs`. See
 [docs-vp/guide/stats.md](docs-vp/guide/stats.md) for details.
@@ -29,9 +29,9 @@ npx agentspend-cli spend report
 npm install -g agentspend-cli
 ```
 
-The package on npm is `agentspend-cli`; the command it installs is `agentops`.
+The package on npm is `agentspend-cli`; the command it installs is `agentspend`.
 
-## What agentops solves
+## What agentspend solves
 
 - **No visibility into agent API cost** — `spend track` records each call's cost by provider and project; `spend report` totals it.
 - **Budgets get blown silently** — `spend budget <amount>` sets a cap; `spend budget` (no argument) checks status and exits non-zero when over, so it can gate a CI job.
@@ -42,23 +42,23 @@ The package on npm is `agentspend-cli`; the command it installs is `agentops`.
 ### spend
 
 ```bash
-agentops spend track --provider openai --model gpt-4o --cost 0.42 --project myagent
-agentops spend track --provider anthropic --cost 0.10 --project myagent
+agentspend spend track --provider openai --model gpt-4o --cost 0.42 --project myagent
+agentspend spend track --provider anthropic --cost 0.10 --project myagent
 
-agentops spend report                    # totals across all entries
-agentops spend report --project myagent  # scoped to one project
-agentops spend report --json             # machine-readable output
+agentspend spend report                    # totals across all entries
+agentspend spend report --project myagent  # scoped to one project
+agentspend spend report --json             # machine-readable output
 
-agentops spend budget 10.00              # set a $10 budget
-agentops spend budget                    # check status; exits 1 if over budget
+agentspend spend budget 10.00              # set a $10 budget
+agentspend spend budget                    # check status; exits 1 if over budget
 ```
 
 ### sync
 
 ```bash
-agentops sync save myagent ./agent-config.json    # snapshot a file as "myagent"
-agentops sync load myagent ./restored-config.json # restore it elsewhere
-agentops sync list                                # list saved profiles
+agentspend sync save myagent ./agent-config.json    # snapshot a file as "myagent"
+agentspend sync load myagent ./restored-config.json # restore it elsewhere
+agentspend sync list                                # list saved profiles
 ```
 
 ## Develop

@@ -2,7 +2,7 @@
 
 ## Our Commitment
 
-We are committed to creating a welcoming, inclusive, and respectful community for all contributors and users of agentops, regardless of background, identity, experience, or perspective.
+We are committed to creating a welcoming, inclusive, and respectful community for all contributors and users of agentspend, regardless of background, identity, experience, or perspective.
 
 ## Our Standards
 

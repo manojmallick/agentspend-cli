@@ -43,9 +43,9 @@ const tileSvgs = tiles
   })
   .join("\n");
 
-const svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agentops v${ver} stats: ${tiles.map((t) => `${t.label} ${t.value}`).join(", ")}">
+const svg = `<svg viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="agentspend v${ver} stats: ${tiles.map((t) => `${t.label} ${t.value}`).join(", ")}">
   <rect width="${width}" height="${height}" rx="16" fill="#131120"/>
-  <text x="${padding}" y="42" font-family="ui-sans-serif, sans-serif" font-size="24" font-weight="700" fill="#f5f3ff">agentops</text>
+  <text x="${padding}" y="42" font-family="ui-sans-serif, sans-serif" font-size="24" font-weight="700" fill="#f5f3ff">agentspend</text>
   <text x="${padding}" y="62" font-family="ui-monospace, monospace" font-size="13" fill="#7c6af7">v${ver}</text>
 ${tileSvgs}
 </svg>
