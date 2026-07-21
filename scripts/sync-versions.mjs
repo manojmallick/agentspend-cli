@@ -2,8 +2,8 @@
 /**
  * sync-versions.mjs
  *
- * Syncs the agentops version across package.json and version.json.
- * agentops is a single-package repo, so this is a two-file sync — kept as
+ * Syncs the agentspend version across package.json and version.json.
+ * agentspend is a single-package repo, so this is a two-file sync — kept as
  * its own script (rather than hand-editing) so the two files never drift.
  *
  * Usage:

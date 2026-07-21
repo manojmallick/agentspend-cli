@@ -3,7 +3,7 @@
  * so a future `wrapper sync` can re-apply them after a plugin version bump.
  */
 export default {
-  "name": "agentops",
+  "name": "agentspend-cli",
   "platform": "cli-tool",
   "plugins": {
     "seo": false,

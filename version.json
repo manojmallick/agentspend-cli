@@ -7,8 +7,8 @@
     "cli_commands": 8,
     "runtime_dependencies": 1,
     "dev_dependencies": 5,
-    "package_packed_kb": 4.9,
-    "package_unpacked_kb": 12.9,
+    "package_packed_kb": 5,
+    "package_unpacked_kb": 13,
     "package_file_count": 11
   }
 }

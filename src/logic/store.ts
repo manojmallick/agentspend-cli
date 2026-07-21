@@ -3,7 +3,7 @@ import { homedir } from "node:os";
 import { join } from "node:path";
 
 export function configDir(): string {
-  const dir = process.env.AGENTOPS_HOME ?? join(homedir(), ".agentops");
+  const dir = process.env.AGENTSPEND_HOME ?? join(homedir(), ".agentspend");
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
   return dir;
 }

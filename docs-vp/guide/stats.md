@@ -1,12 +1,12 @@
 # Project stats
 
-agentops doesn't have a retrieval/accuracy benchmark — it's a spend tracker and
+agentspend doesn't have a retrieval/accuracy benchmark — it's a spend tracker and
 config-sync tool, not a code-retrieval system. What it does have is real, verifiable
 numbers about the project itself, refreshed from an actual build/test/pack run
 (never hand-typed) by `scripts/refresh-stats.mjs`, and the canonical source is
 [`version.json`](../../version.json).
 
-![agentops stats](../../docs/stats-banner.svg)
+![agentspend stats](../../docs/stats-banner.svg)
 
 ## Current numbers (v0.1.0)
 

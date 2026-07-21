@@ -6,7 +6,9 @@
 
 Initial `spend` (track/report/budget-cap) and `sync` (save/load/list) CLI, published
 as `agentspend-cli` on npm (the `agentops` npm name was already taken by an unrelated
-package). Local-only storage in `~/.agentops`, no server, no account.
+package — the project itself, including its GitHub repo and CLI command, was later
+renamed from "agentops" to "agentspend" for consistency with the npm package name).
+Local-only storage in `~/.agentspend`, no server, no account.
 
 **Tags:** spend-tracking, config-sync, npm-publish, changesets
 

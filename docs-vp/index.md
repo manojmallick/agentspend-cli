@@ -1,11 +1,11 @@
-# agentops
+# agentspend
 
 Track and cap AI agent API spend, and sync agent config/state across environments.
 
-Local-first, free CLI — no server, no account, everything lives in `~/.agentops`
-(or `$AGENTOPS_HOME` if set).
+Local-first, free CLI — no server, no account, everything lives in `~/.agentspend`
+(or `$AGENTSPEND_HOME` if set).
 
-![agentops stats](../docs/stats-banner.svg)
+![agentspend stats](../docs/stats-banner.svg)
 
 ## Guides
 
@@ -17,8 +17,8 @@ Local-first, free CLI — no server, no account, everything lives in `~/.agentop
 
 ```bash
 npm install -g agentspend-cli
-agentops spend track --provider openai --cost 0.42
-agentops spend report
+agentspend spend track --provider openai --cost 0.42
+agentspend spend report
 ```
 
 See the [main README](../README.md) for the full command list.
