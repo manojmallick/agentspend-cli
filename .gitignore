@@ -5,3 +5,4 @@ dist
 .context
 gain-report.json
 benchmarks/reports
+.DS_Store
